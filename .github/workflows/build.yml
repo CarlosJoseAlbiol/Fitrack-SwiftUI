@@ -6,4 +6,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - run: xcodebuild -scheme YourApp -destination 'platform=iOS Simulator,name=iPhone 15' build
+      - run: unzip -o Fitrack.xcodeproj.zip
+      - run: xcodebuild -project Fitrack.xcodeproj -scheme YourApp -destination 'platform=iOS Simulator,name=iPhone 15' build
