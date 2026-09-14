@@ -7,4 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -o Fitrack.xcodeproj.zip
+      - run: xcodebuild -list -project Fitrack.xcodeproj
       - run: xcodebuild -project Fitrack.xcodeproj -scheme YourApp -destination 'platform=iOS Simulator,name=iPhone 15' build
